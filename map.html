@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RainStep | Flood Hazard Map</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">🌧 RainStep</div>
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="map.html">Flood Map</a>
+        <a href="report.html">Report Flood</a>
+        <a href="route.html">Route Navigation</a>
+    </nav>
+    <button class="login-btn" onclick="logoutUser()">Logout</button>
+</header>
+
+<main class="map-page">
+    <h1>Flood Hazard Map</h1>
+    <p>View flood hazard information and potentially affected areas.</p>
+
+    <div class="map-search">
+        <input type="text" id="locationSearch"
+        placeholder="Search a location (e.g. Marikina City)">
+        <button onclick="searchLocation()">Search</button>
+    </div>
+
+    <div class="map-container">
+        <div class="map-placeholder">
+            <span>🗺️</span>
+            <h2>Flood Hazard Map</h2>
+            <p>Metro Manila Sample Map Display</p>
+
+            <div class="risk-marker low">LOW RISK</div>
+            <div class="risk-marker moderate">MODERATE RISK</div>
+            <div class="risk-marker high">HIGH RISK</div>
+        </div>
+    </div>
+
+    <div class="map-legend">
+        <span>🟢 Low Risk</span>
+        <span>🟡 Moderate Risk</span>
+        <span>🔴 High Risk</span>
+    </div>
+
+    <div id="searchResult" class="search-result">
+        Search for a location to view sample information.
+    </div>
+
+    <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

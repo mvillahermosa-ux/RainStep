@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RainStep | Route Navigation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="navbar">
+        <h2>RainStep</h2>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="map.html">Flood Map</a>
+            <a href="report.html">Report Flood</a>
+            <a href="route.html">Route Navigation</a>
+        </nav>
+    </header>
+
+    <main class="route-page">
+        <h1>Route Navigation</h1>
+        <p>Find a suggested route while considering reported flood hazards.</p>
+
+        <form onsubmit="findRoute(event)" class="route-form">
+
+            <label for="startLocation">Starting Location</label>
+            <input type="text" id="startLocation"
+                   placeholder="Enter your starting location" required>
+
+            <label for="destination">Destination</label>
+            <input type="text" id="destination"
+                   placeholder="Enter your destination" required>
+
+            <button type="submit">Find Route</button>
+        </form>
+
+        <div id="routeResult" class="route-result"></div>
+
+        <a href="dashboard.html" class="back-link">Back to Dashboard</a>
+    </main>
+
+</body>
+</html>

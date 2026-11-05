@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RainStep | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">🌧 RainStep</div>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="map.html">Flood Map</a>
+            <a href="report.html">Report Flood</a>
+            <a href="route.html">Route Navigation</a>
+        </nav>
+        <button class="login-btn" onclick="logoutUser()">Logout</button>
+    </header>
+
+    <main class="dashboard">
+        <h1>Welcome to RainStep!</h1>
+        <p class="dashboard-subtitle">
+            Flood Hazard Mapping and Navigation System
+        </p>
+
+        <div class="dashboard-grid">
+            <div class="dashboard-card">
+                <h2>🗺️ Flood Hazard Map</h2>
+                <p>View flood-prone areas and hazard information.</p>
+                <a href="map.html">Open Flood Map →</a>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>⚠️ Report Flood Incident</h2>
+                <p>Submit information about flooding in your area.</p>
+                <a href="report.html">Submit Report →</a>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>🚗 Route Navigation</h2>
+                <p>Find route guidance using available flood information.</p>
+                <a href="route.html">View Routes →</a>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>🔔 Flood Alerts</h2>
+                <p>View flood reports and system notifications.</p>
+                <a href="alerts.html">View Alerts →</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<button onclick="logoutUser()">Logout</button>

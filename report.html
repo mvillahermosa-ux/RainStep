@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Flood Incident | RainStep</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h2>RainStep</h2>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="map.html">Flood Map</a>
+            <a href="report.html">Report Flood</a>
+            <a href="route.html">Route Navigation</a>
+        </nav>
+    </header>
+
+    <main class="report-container">
+        <h1>Report a Flood Incident</h1>
+        <p>Help inform other users about possible flooding in your area.</p>
+
+        <form class="report-form" onsubmit="submitFloodReport(event)">
+
+            <label for="reportLocation">Flood Location</label>
+            <input type="text" id="reportLocation"
+                   placeholder="Enter the affected location" required>
+
+            <label for="reportDate">Date of Incident</label>
+            <input type="date" id="reportDate" required>
+
+            <label for="severity">Flood Severity</label>
+            <select id="severity" required>
+                <option value="">Select severity</option>
+                <option value="Low">Low</option>
+                <option value="Moderate">Moderate</option>
+                <option value="High">High</option>
+            </select>
+
+            <label for="description">Incident Description</label>
+            <textarea id="description"
+                      placeholder="Describe the flooding situation..."
+                      rows="5" required></textarea>
+
+            <button type="submit">Submit Report</button>
+        </form>
+
+        <div id="reportResult"></div>
+
+        <a href="dashboard.html" class="back-link">
+            Back to Dashboard
+        </a>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
